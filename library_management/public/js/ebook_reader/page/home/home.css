@@ -1,0 +1,16 @@
+.main-content {
+    background-color: #E8EBF2;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+
+.homepage.black {
+    .main-content {
+        background: #3A3A3A;
+    }
+
+    h2 {
+        color: #fff;
+    }
+}

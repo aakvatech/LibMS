@@ -1,0 +1,47 @@
+.navigation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &.sticky {
+        position: sticky;
+        bottom: auto;
+        top: 0;
+        background-color: #00B0AB;
+        margin-top: -55px;
+        z-index: 1;
+    }
+
+    button {
+        color: #FFF;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding: 20px;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            height: 15px;
+            background-color: #fff;
+            width: 1px;
+
+        }
+
+        &:first-child::before {
+            visibility: hidden;
+        }
+    }
+
+}

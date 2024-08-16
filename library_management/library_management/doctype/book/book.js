@@ -63,7 +63,17 @@ frappe.ui.form.on('Book', {
     if (bookCategory) {
         createBookCategory(frm, bookCategory);
     }
-    }
+    },
+    upload_book_to_aws: (frm) => {
+        let $file_input = $('<input type="file" accept="*/*">');
+        $file_input.on('change', function(event) {
+            let file = event.target.files[0];
+            if (file) {
+                upload_file_to_aws(frm, file);
+            }
+        });
+        $file_input.click();
+    },
 
 });
 
@@ -180,4 +190,37 @@ function createPublication(frm, publicationName) {
         .catch(err => {
             console.error("Error checking Publication existence:", err);
         });
+}
+
+function upload_file_to_aws(frm, file) {
+    if (file) {
+
+        var reader = new FileReader();
+        reader.onload = function(event) {
+            var filedata = event.target.result;
+
+            frappe.call({
+                method: 'library_management.api.aws.upload_book_file_to_aws',
+                args: {
+                    filedata: filedata.split(',')[1],  // Remove the base64 prefix
+                    filename: file.name
+                },
+                freeze: true,
+                freeze_message: 'Uploading file...',
+                callback: function(r) {
+                    if (r.message) {
+                        frm.set_value('aws_key', r.message);
+                        frm.save();
+                        frappe.show_alert("File uploaded successfully.", 10);
+                    } else {
+                        frappe.msgprint("Error uploading file.");
+                    }
+                },
+                error: function(error) {
+                    frappe.msgprint("Error uploading file.");
+                }
+            });
+        };
+        reader.readAsDataURL(file);
+    }
 }

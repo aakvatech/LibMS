@@ -6,42 +6,42 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "id_document",
-  "id_document_no",
-  "id_attachment",
+  "document_type",
+  "document_no",
+  "attachment",
   "remark"
  ],
  "fields": [
-  {
-   "fieldname": "id_document",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "ID Document",
-   "options": "\nPassport\nPan Card\nVoter Id Card\nEmployee Id Card\nRation Card\nOther"
-  },
-  {
-   "fieldname": "id_document_no",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "ID Document No"
-  },
-  {
-   "fieldname": "id_attachment",
-   "fieldtype": "Attach",
-   "in_list_view": 1,
-   "label": "ID Attachment"
-  },
   {
    "fieldname": "remark",
    "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Remark"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Document Type",
+   "options": "Document Type"
+  },
+  {
+   "fieldname": "document_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document No"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Attachment"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-07-05 16:58:53.388269",
+ "modified": "2024-08-12 16:26:26.177004",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Member Documents",

@@ -1,0 +1,11 @@
+.banner-section {
+    margin-bottom: 87px;
+
+
+}
+
+.banner-section img {
+    width: 100%;
+    height: 390px;
+    object-fit: contain;
+}

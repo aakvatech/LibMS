@@ -182,10 +182,12 @@ frappe.ui.form.on('Book Transaction', {
             }).then((r) => {
                 if (r.message) {
                     if (frm.doc.transaction_type == "Issue") {
+                        var today = frappe.datetime.get_today();
                         let row = frappe.model.add_child(frm.doc, "Book Transaction Detail", "book_transaction_detail");
                         row.access_no = r.message.asset_id;
                         row.book_title = r.message.asset_name;
                         row.status = r.message.status;
+                        row.due_date = frappe.datetime.add_days(today, 30);
                         row.isbn_no = r.message.isbn;
                         frm.refresh_field('book_transaction_detail');
 
@@ -246,6 +248,11 @@ frappe.ui.form.on("Book Transaction Detail", {
         var due = frappe.datetime.add_days(child_doc.transaction_date, 30);
         frappe.model.set_value(cdt, cdn, 'due_date', due);
     },
+    before_save: function (frm, cdt, cdn) {
+        var child_doc = locals[cdt][cdn];
+        var due = frappe.datetime.add_days(child_doc.transaction_date, 30);
+        frappe.model.set_value(cdt, cdn, 'due_date', due);
+    },
 });
 
 // Return Book code 
@@ -260,7 +267,7 @@ frappe.ui.form.on("Return Book Details", {
                 frm.doc.return_book_details.forEach(function(access){
                     var first_access_no = child_rows[i].access_no;
                     frappe.call({
-                        method: "fetch_member_details.fetch_member_issue_book_detail",
+                        method: "fetch_member_issue_book_detail",
                         args: {
                             first_access_no
                         },
@@ -291,7 +298,6 @@ frappe.ui.form.on("Return Book Details", {
                                 }
                         }
                     });
-                    //frappe.msgprint(__("OTP generated successfully: ") + i);
                     i++;
                 });
             } else {

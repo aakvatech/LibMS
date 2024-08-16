@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "MLJS-.{transaction_type}.-.####",
  "creation": "2023-04-04 18:51:03.425116",
  "default_view": "List",
  "doctype": "DocType",
@@ -10,7 +10,6 @@
   "type_section",
   "transaction_type",
   "scan_barcode",
-  "qr",
   "column_break_qg935",
   "member",
   "member_name",
@@ -43,7 +42,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "depends_on": "eval:doc.transaction_type != \"Return\" && doc.transaction_type != \"Renew\"",
    "fieldname": "section_break_8mgcp",
    "fieldtype": "Section Break",
    "label": "Book Information"
@@ -79,6 +77,7 @@
    "read_only": 1
   },
   {
+   "depends_on": "eval:doc.transaction_type == \"Issue\" || doc.transaction_type == \"Renew\"",
    "fieldname": "book_transaction_detail",
    "fieldtype": "Table",
    "label": "Book Transaction Detail",
@@ -96,11 +95,6 @@
    "options": "Barcode"
   },
   {
-   "fieldname": "qr",
-   "fieldtype": "Data",
-   "label": "qr"
-  },
-  {
    "fieldname": "member",
    "fieldtype": "Link",
    "label": "Member",
@@ -114,12 +108,12 @@
    "read_only": 1
   },
   {
-   "depends_on": "eval:doc.transaction_type != \"Issue\"",
    "fieldname": "return_book_section",
    "fieldtype": "Section Break",
    "label": "Return Book"
   },
   {
+   "depends_on": "eval:doc.transaction_type == \"Return\"",
    "fieldname": "return_book_details",
    "fieldtype": "Table",
    "label": "Return Book Details",
@@ -134,10 +128,11 @@
    "link_fieldname": "transaction_no"
   }
  ],
- "modified": "2024-07-05 17:13:55.732182",
+ "modified": "2024-08-10 12:41:05.538027",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Book Transaction",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

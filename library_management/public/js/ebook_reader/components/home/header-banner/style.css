@@ -1,0 +1,102 @@
+.header-banner-wrapper {
+    position: relative;
+    height: 430px;
+    padding-top: 20px;
+    z-index: 2;
+
+    .background {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .inner {
+        position: relative;
+        padding: 0 20px;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        .right-buttons {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            button {
+                border-radius: 5px;
+                background: #FFF;
+                color: #00B0AB;
+                font-family: Inter;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                padding: 10px;
+            }
+
+            .nav-icon {
+                cursor: pointer;
+                width: 35px;
+            }
+        }
+    }
+
+
+    .banner {
+
+        padding-top: 90px;
+        position: relative;
+
+        .title {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 41px;
+            text-align: center;
+        }
+
+
+    }
+
+
+
+
+}
+
+.profile-menu {
+    position: absolute;
+    right: -5px;
+    top: 45px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+
+    ul li {
+        padding: 10px;
+        cursor: pointer;
+        font-size: 14px;
+        color: #33363F;
+        border-radius: 10px;
+        transition: 0.3s all ease;
+
+        &:hover {
+            background-color: #eee;
+
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+}

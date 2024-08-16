@@ -22,7 +22,7 @@
   "book_title",
   "is_cancelled",
   "return_book_details_column",
-  "return_transaction_no",
+  "overdue_day",
   "return_date"
  ],
  "fields": [
@@ -120,20 +120,22 @@
    "label": "Return Book Details"
   },
   {
-   "fieldname": "return_transaction_no",
-   "fieldtype": "Data",
-   "label": "Return Transaction No"
-  },
-  {
+   "allow_on_submit": 1,
    "fieldname": "return_date",
    "fieldtype": "Date",
    "label": "Return Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "overdue_day",
+   "fieldtype": "Data",
+   "label": "Overdue Day"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-20 20:31:06.642106",
+ "modified": "2024-08-10 18:37:29.217600",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Book Ledger",

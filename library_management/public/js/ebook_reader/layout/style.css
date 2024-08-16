@@ -1,0 +1,9 @@
+.inner-layout {
+    display: flex;
+    background-color: #E8EBF2;
+    min-height: 100vh;
+
+    .right-column {
+        flex: 1;
+    }
+}

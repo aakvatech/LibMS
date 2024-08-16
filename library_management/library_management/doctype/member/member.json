@@ -14,11 +14,10 @@
   "member_name",
   "middle_name",
   "last_name",
-  "column_break_sad1",
+  "column_break_s66x",
   "birth_date",
   "membership_expiry_date",
   "gender",
-  "library_service",
   "membership_status",
   "notify_by",
   "disable",
@@ -165,12 +164,6 @@
    "show_dashboard": 1
   },
   {
-   "fieldname": "library_service",
-   "fieldtype": "Link",
-   "label": "Library Service",
-   "options": "Library Service"
-  },
-  {
    "fieldname": "membership_details_section",
    "fieldtype": "Section Break",
    "label": "Membership Details"
@@ -222,7 +215,7 @@
    "options": "Member Documents"
   },
   {
-   "fieldname": "column_break_sad1",
+   "fieldname": "column_break_s66x",
    "fieldtype": "Column Break"
   }
  ],
@@ -239,7 +232,7 @@
    "link_fieldname": "customer_name"
   }
  ],
- "modified": "2024-08-07 12:26:09.687099",
+ "modified": "2024-08-12 19:07:17.178968",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Member",

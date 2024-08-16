@@ -16,10 +16,11 @@
   "aws_settings_section",
   "aws_user",
   "aws_bucket_name",
-  "column_break_jkfp",
   "aws_region_name",
+  "column_break_jkfp",
   "access_key",
-  "secret_key"
+  "secret_key",
+  "folder_name"
  ],
  "fields": [
   {
@@ -86,6 +87,12 @@
    "label": "Secret Key"
   },
   {
+   "description": "(optional): Folder that store books in AWS Bucket, ",
+   "fieldname": "folder_name",
+   "fieldtype": "Data",
+   "label": "Folder Name"
+  },
+  {
    "fieldname": "asset_naming_series",
    "fieldtype": "Select",
    "label": "Asset Naming Series",
@@ -95,7 +102,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-08-07 12:46:04.421680",
+ "modified": "2024-08-06 17:20:29.917376",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Library Setting",

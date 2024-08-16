@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:book_category",
  "creation": "2024-01-10 17:38:02.495886",
@@ -20,7 +21,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-01 11:41:12.514748",
+ "modified": "2024-08-12 18:28:40.458335",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Book Category",

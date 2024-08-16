@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:ddc",
  "creation": "2024-03-26 13:37:33.465434",
@@ -46,7 +47,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-04 14:32:22.834887",
+ "modified": "2024-08-12 18:27:30.050343",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "DDC",
