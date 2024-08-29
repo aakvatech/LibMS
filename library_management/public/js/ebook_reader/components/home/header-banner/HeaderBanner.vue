@@ -36,9 +36,9 @@
         <Search />
       </div>
     </div>
-    <Navigation />
+    <Navigation :onLinkClick="onLinkClick" />
   </div>
-  <Navigation :isSticky="true" />
+  <Navigation :isSticky="true" :onLinkClick="onLinkClick" />
 
 </template>
 <script setup>

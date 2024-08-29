@@ -13,6 +13,9 @@
   "default_asset_category",
   "number_of_book_allowed",
   "asset_naming_series",
+  "column_break_ujju",
+  "uom",
+  "library_service_uom",
   "aws_settings_section",
   "aws_user",
   "aws_bucket_name",
@@ -97,12 +100,27 @@
    "fieldtype": "Select",
    "label": "Asset Naming Series",
    "options": "ACC-ASS-.YYYY.-"
+  },
+  {
+   "fieldname": "column_break_ujju",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Button",
+   "label": "UOM"
+  },
+  {
+   "fieldname": "library_service_uom",
+   "fieldtype": "Link",
+   "label": "Library service UOM",
+   "options": "UOM"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-08-06 17:20:29.917376",
+ "modified": "2024-08-22 00:21:55.077483",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Library Setting",

@@ -8,7 +8,10 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "multimedia_category"
+  "multimedia_category",
+  "disabled",
+  "column_break_sylk",
+  "image"
  ],
  "fields": [
   {
@@ -16,11 +19,26 @@
    "fieldtype": "Data",
    "label": "Multimedia Category",
    "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "column_break_sylk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-09 19:41:51.233349",
+ "modified": "2024-08-19 17:19:42.752740",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Multimedia Category",

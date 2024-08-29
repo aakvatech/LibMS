@@ -5,11 +5,12 @@
       <div class="title-wrapper">
         <h2>Multimedia Categories</h2>
         <div class="right">
-          <button class="link">See all<img src="/files/see-all-arrow.svg" /></button>
+          <button @click="handleClick('media-categories')" class="link">See all<img
+              src="/files/see-all-arrow.svg" /></button>
         </div>
       </div>
       <div class="category-list-wrapper">
-        <template v-for="item in bookCategoryStore.book_categories" :key="item.category">
+        <template v-for="item in mediaCategoryStore.media_categories" :key="item.category">
           <div class="item">
             <div class="icon-wrapper" style="background-image: url(/files/round.png);"><img src="/files/image.png">
             </div>
@@ -26,11 +27,29 @@
 <script setup>
 import { onMounted } from 'vue';
 import { useBooksStore } from '../../../../books/store';
-const bookCategoryStore = useBooksStore();
-
-onMounted(() => {
-  bookCategoryStore.get_book_categories({ length: 5 });
-});
+// const bookCategoryStore = useBooksStore();
+const mediaCategoryStore = {
+  media_categories: [
+    {
+      category: 'Category 1',
+    },
+    {
+      category: 'Category 2',
+    },
+    {
+      category: 'Category 3',
+    },
+    {
+      category: 'Category 4',
+    },
+    {
+      category: 'Category 5',
+    }
+  ]
+}
+// onMounted(() => {
+//   bookCategoryStore.get_book_categories({ length: 5 });
+// });
 </script>
 
 <script>

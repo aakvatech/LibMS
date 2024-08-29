@@ -18,6 +18,7 @@
   "member_since_date",
   "section_break_btgb",
   "library_membership_details",
+  "expired",
   "payment_details",
   "paid",
   "currency",
@@ -144,6 +145,7 @@
    "fieldtype": "Section Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "library_membership_details",
    "fieldtype": "Table",
    "label": "Library Membership Details",
@@ -152,12 +154,17 @@
   {
    "fieldname": "column_break_ffjx",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expired",
+   "fieldtype": "Button",
+   "label": "Expired"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-05 12:54:57.145596",
+ "modified": "2024-08-17 00:31:19.690296",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Library Membership",

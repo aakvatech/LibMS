@@ -1,0 +1,213 @@
+.media-detail-wrapper {
+    max-width: 1123px;
+    padding: 60px 20px;
+    margin: 0 auto;
+
+    .media-image-title-wrapper {
+        display: flex;
+        gap: 45px;
+        max-width: 880px;
+        margin: 0 auto;
+        align-items: flex-start;
+
+        .image-wrapper {
+
+            position: relative;
+            box-shadow: -14px 15px 30px 10px rgba(0, 0, 0, 0.25);
+            min-width: 360px;
+            height: 426px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+
+            .v-responsive {
+                max-height: none;
+                overflow: visible;
+            }
+
+            img {
+
+                height: 426px;
+                object-fit: cover;
+            }
+
+            .player-icon {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 68px;
+                height: 68px;
+
+                svg {
+                    width: 100%;
+
+                }
+            }
+        }
+
+        .title-wrapper {
+            width: 100%;
+            padding-top: 17px;
+
+            h1 {
+                color: #33363F;
+                font-size: 52px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%;
+                margin-bottom: 2px;
+            }
+
+            .subtitle {
+                color: #33363F;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    }
+
+    .media-detail-section {
+        border-radius: 10px;
+        background: #FFF;
+        padding: 22px 100px 60px;
+        margin-top: -290px;
+
+        .description-wrapper {
+            padding-left: 413px;
+            min-height: 230px;
+        }
+
+        .description {
+            color: #33363F;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            margin-bottom: 20px;
+            /* 22.4px */
+        }
+
+        .button-wrapper {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .primary-button {
+            display: flex;
+            padding: 11px 15px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            color: #FFF;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            border-radius: 5px;
+            background: #00B0AB;
+            cursor: pointer;
+
+            .icon-wrapper {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+    }
+
+    .audio-player {
+        margin-top: 73px;
+
+        .controls {
+            border-radius: 10px;
+            background: #00B0AB;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .icon-wrapper {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .time {
+                color: #FFF;
+
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .range-slider,
+            .volume-range-slider {
+                width: 100%;
+
+
+                -webkit-appearance: none;
+                /* Removes default slider styling for WebKit browsers */
+                appearance: none;
+                /* Removes default slider styling for other browsers */
+                /* Width of the slider */
+                height: 8px;
+                /* Height of the slider */
+                /* background: #ddd; */
+                /* Background color of the slider track */
+                outline: none;
+                /* Removes outline */
+                /* border-radius: 5px; */
+                /* Rounded corners */
+                cursor: pointer;
+                /* Cursor changes to pointer when hovering */
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.31);
+
+                &::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    /* Removes default thumb styling */
+                    appearance: none;
+                    /* Removes default thumb styling */
+                    width: 16px;
+                    /* Width of the thumb */
+                    height: 16px;
+                    /* Height of the thumb */
+                    background: #fff;
+                    /* Color of the thumb */
+                    border-radius: 50%;
+                    /* Makes the thumb circular */
+                    cursor: pointer;
+                    /* Cursor changes to pointer when hovering */
+                    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+                    /* Adds a shadow to the thumb */
+                }
+
+                &:active::-webkit-slider-thumb {
+                    background: #fff;
+                }
+
+            }
+
+            .volume-control {
+
+                display: flex;
+                align-items: center;
+
+
+            }
+
+        }
+
+
+    }
+}

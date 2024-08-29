@@ -15,6 +15,7 @@
   "middle_name",
   "last_name",
   "column_break_s66x",
+  "member_type",
   "birth_date",
   "membership_expiry_date",
   "gender",
@@ -217,6 +218,13 @@
   {
    "fieldname": "column_break_s66x",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "member_type",
+   "fieldtype": "Link",
+   "label": "Member Type",
+   "options": "Member Type",
+   "reqd": 1
   }
  ],
  "image_field": "image",
@@ -232,7 +240,7 @@
    "link_fieldname": "customer_name"
   }
  ],
- "modified": "2024-08-12 19:07:17.178968",
+ "modified": "2024-08-13 11:52:39.703793",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Member",

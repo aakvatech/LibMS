@@ -47,10 +47,6 @@ class BookTransaction(Document):
                             asset_doc.status = self.transaction_type
                             asset_doc.save()
                             frappe.msgprint(f"Asset {access_no} updated successfully")
-
-                        # asset_doc.status = self.transaction_type
-                        # asset_doc.save()
-                        # frappe.msgprint(f"Asset {access_no} updated successfully")
         except Exception as e:
             frappe.log_error(frappe.get_traceback(), "Asset Update Error")
             frappe.throw(f"An error occurred while updating assets: {str(e)}")

@@ -1,0 +1,193 @@
+.book-detail-wrapper {
+    max-width: 1123px;
+    padding: 60px 20px;
+    margin: 0 auto;
+
+    .book-image-title-wrapper {
+        display: flex;
+        gap: 45px;
+        max-width: 880px;
+        margin: 0 auto;
+        align-items: flex-start;
+
+        .image-wrapper {
+
+            position: relative;
+            box-shadow: -14px 15px 30px 10px rgba(0, 0, 0, 0.25);
+            min-width: 322px;
+            height: 426px;
+
+            .v-responsive {
+                max-height: none;
+                overflow: visible;
+            }
+
+            img {
+
+                height: 426px;
+                object-fit: cover;
+            }
+        }
+
+        .title-wrapper {
+            width: 100%;
+            padding-top: 17px;
+
+            h1 {
+                color: #33363F;
+                font-size: 52px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%;
+                margin-bottom: 2px;
+            }
+
+            .subtitle {
+                color: #33363F;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    }
+
+    .book-detail-section {
+        border-radius: 10px;
+        background: #FFF;
+        padding: 60px 100px;
+        margin-top: -290px;
+
+        .description-wrapper {
+            padding-left: 363px;
+        }
+
+        .description {
+            color: #33363F;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            margin-bottom: 20px;
+            /* 22.4px */
+        }
+
+        .button-wrapper {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .primary-button {
+            display: flex;
+            padding: 11px 15px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            color: #FFF;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            border-radius: 5px;
+            background: #00B0AB;
+            cursor: pointer;
+        }
+
+        .book-desc-columns {
+            display: flex;
+            padding-top: 75px;
+            justify-content: space-between;
+
+            .book-desc-column {
+                width: 50%;
+
+                h2 {
+                    margin-bottom: 13px;
+                }
+
+                &:last-child {
+                    width: 30%;
+                }
+            }
+
+            .book-fields {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+
+                .book-field {
+                    width: calc(50% - 20px);
+                    display: flex;
+
+                    .label {
+                        min-width: 106px;
+                        color: #545353;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+
+                    .value {
+                        color: #999;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        min-width: 155px;
+                    }
+
+                }
+            }
+
+            .book-access-fields {
+                gap: 20px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .book-access-item,
+            .book-access-header {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+
+                .access-number {
+                    min-width: 130px;
+                }
+            }
+
+            .book-access-header {
+
+                .access-number,
+                .status {
+                    color: #33363F;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+            }
+
+            .book-access-item {
+
+                .access-number {
+                    color: #33363F;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                .status {
+                    color: #00B0AB;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+
+        }
+    }
+}

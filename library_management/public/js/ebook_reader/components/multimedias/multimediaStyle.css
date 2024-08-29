@@ -1,0 +1,109 @@
+.media-item {
+    border-radius: 10px;
+    background: #FFF;
+    width: calc(20% - 40px);
+
+    .image-wrapper {
+        border-radius: 10px 10px 0px 0px;
+        background: #DAEFFF;
+        padding: 0;
+        height: 190px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+
+        .v-responsive__sizer {
+            display: none;
+        }
+
+        .v-img {
+            overflow: visible;
+        }
+
+        img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            position: static;
+            box-shadow: none;
+        }
+
+        .player-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .duration {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.38);
+            color: #FFF;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding: 2px 5px;
+        }
+
+    }
+
+    .book-detail {
+        border-radius: 0px 0px 10px 10px;
+        background: #FFF;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+        padding: 10px 15px;
+    }
+
+    .meta-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        align-self: stretch;
+    }
+
+    .title {
+        color: #33363F;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 6px;
+    }
+
+    .meta {
+
+        color: #4B556A;
+        font-family: Inter;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        .label {
+            font-weight: 700;
+        }
+
+        .avail-value {
+            border-radius: 3px;
+            background: #CAFDFB;
+            color: #00B0AB;
+            font-family: Inter;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            display: inline-block;
+            padding: 2px 5px;
+        }
+    }
+}

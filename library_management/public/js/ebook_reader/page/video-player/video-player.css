@@ -1,0 +1,98 @@
+.video-player-wrapper {
+    display: flex;
+    column-gap: 20px;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: inset 10px 0px 15px rgba(0, 0, 0, 0.09);
+
+    .left-column {
+        .iframe-wrapper {
+            margin-bottom: 20px;
+            padding-bottom: 54%;
+            position: relative;
+
+            iframe {
+                height: 100%;
+                border-radius: 10px;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+
+        .video-detail {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .title {
+                color: #33363F;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            .description {
+                color: #4B556A;
+
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px;
+                /* 157.143% */
+            }
+
+            .meta-wrapper {
+                display: flex;
+                gap: 15px;
+
+                .meta {
+                    display: flex;
+                    color: #4B556A;
+                    gap: 5px;
+                    font-size: 12px;
+                    font-style: normal;
+
+                    line-height: normal;
+
+                    .label {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    .right-column {
+        min-width: 340px;
+
+        .related-medias-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .media-item {
+            width: 100%;
+            display: flex;
+            box-shadow: none;
+
+            .image-wrapper {
+                min-width: 100px;
+                width: 100px;
+                height: 70px;
+                border-radius: 10px;
+
+                img {
+                    height: 70px;
+                }
+            }
+
+            .book-detail {
+                box-shadow: none;
+            }
+        }
+    }
+}

@@ -11,22 +11,7 @@
       </div>
       <div class="book-list-wrapper">
         <template v-for="item in bookstore.books" :key="item.book_title">
-          <div class="item">
-            <div class="image-wrapper"><v-img :src="item.image ? item.image
-              : 'https://placehold.co/150?text=Item'">
-              </v-img></div>
-            <div class="book-detail">
-              <div class="title">{{ item.book_title }}</div>
-              <div class="meta-wrapper">
-                <div class="meta"><span class="label">Author:</span> {{ item.author
-                  }}</div>
-                <div class="meta"><span class="label">Language:</span> Gujarati</div>
-                <div class="meta"><span class="label">Sect:</span> Shia</div>
-                <div class="meta"><span class="label">Book type:</span> E-book</div>
-                <div class="meta"><span class="label">Availability:</span> <span class="avail-value">Yes</span></div>
-              </div>
-            </div>
-          </div>
+          <Book :onLinkClick="onLinkClick" :book="item" />
         </template>
 
 
@@ -39,6 +24,7 @@
 <script setup>
 import { onMounted } from 'vue';
 import { useBooksStore } from '../../../../books/store';
+import Book from '../../books/Book.vue';
 // const bookstore = useBooksStore();
 const bookstore = {
   books: [

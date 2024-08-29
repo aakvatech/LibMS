@@ -1,0 +1,53 @@
+.book-categories-page {
+    padding: 20px;
+
+    h1 {
+        color: #33363F;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 15px;
+    }
+
+    .category-list-wrapper {
+        gap: 40px;
+        display: flex;
+        flex-wrap: wrap;
+
+        .item {
+            border-radius: 10px;
+            background: #FFF;
+            padding: 16px 20px 20px;
+            text-align: center;
+            width: calc(20% - 32px);
+
+            .icon-wrapper {
+                width: 88px;
+                height: 89px;
+                display: flex;
+                align-items: center;
+                margin: 0 auto 10px;
+                background-repeat: no-repeat;
+                justify-content: center;
+
+                img {
+                    width: 60px;
+                    height: 60px;
+                    object-fit: contain;
+                }
+
+
+            }
+
+            .title {
+                color: #33363F;
+                font-family: Inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+    }
+}

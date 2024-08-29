@@ -6,9 +6,9 @@
       <BannerSlider />
       <BookCategories :onLinkClick="onLinkClick" />
       <NewBooks :onLinkClick="onLinkClick" />
-      <MediaCategories />
-      <NewMedia />
-      <NewsAnnouncements />
+      <MediaCategories :onLinkClick="onLinkClick" />
+      <NewMedia :onLinkClick="onLinkClick" />
+      <NewsAnnouncements :onLinkClick="onLinkClick" />
     </div>
     <Footer />
     <!-- <v-app> -->

@@ -3,7 +3,7 @@
         <Sidebar :onLinkClick="onLinkClick" />
         <div class="right-column">
             <Header />
-            <component :is="customComponent" />
+            <component :onLinkClick="onLinkClick" :is="customComponent" />
         </div>
     </div>
 </template>
@@ -24,15 +24,8 @@ export default {
             type: Object, // The prop type should be a component definition (an object)
             required: true,
         },
-    },
-    methods: {
-        handleClick(pageName) {
-            // Call the function passed via prop
-            if (this.onLinkClick) {
-                this.onLinkClick(pageName);
-            }
-        }
     }
+
 };
 </script>
 

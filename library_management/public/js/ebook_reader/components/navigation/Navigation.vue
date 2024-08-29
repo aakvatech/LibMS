@@ -1,7 +1,7 @@
 <template>
     <div :class="navigationClass">
         <button @click="handleClick('book-categories')">Book categories</button>
-        <button @click="handleClick('about')">Multimedia Categories</button>
+        <button @click="handleClick('media-categories')">Multimedia Categories</button>
         <button @click="handleClick('about')">Apply Membership</button>
         <button @click="handleClick('about')">Fees</button>
         <button @click="handleClick('about')">News & Announcements</button>
@@ -15,11 +15,22 @@
 
 export default {
     props: {
-
+        onLinkClick: {
+            type: Function,
+            required: true
+        },
         isSticky: {
             type: Boolean,
             required: false
         },
+    },
+    methods: {
+        handleClick(pageName) {
+            // Call the function passed via prop
+            if (this.onLinkClick) {
+                this.onLinkClick(pageName);
+            }
+        }
     },
     computed: {
         navigationClass() {

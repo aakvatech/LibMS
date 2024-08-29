@@ -9,7 +9,10 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "book_category"
+  "book_category",
+  "disabled",
+  "column_break_qqyx",
+  "image"
  ],
  "fields": [
   {
@@ -17,11 +20,26 @@
    "fieldtype": "Data",
    "label": "Book Category",
    "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "column_break_qqyx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-12 18:28:40.458335",
+ "modified": "2024-08-19 15:50:08.609218",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Book Category",

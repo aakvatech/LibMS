@@ -44,16 +44,18 @@
    "read_only": 1
   },
   {
+   "default": "Today",
    "fieldname": "return_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Return date"
+   "label": "Return date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-08-10 12:48:39.177471",
+ "modified": "2024-08-16 12:31:42.355408",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Return Book Details",
